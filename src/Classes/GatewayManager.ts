@@ -26,7 +26,9 @@ export class GatewayManager extends Base {
 
     this.ws.on('message', async (data) => {
       const parsed = JSON.parse(data.toString());
-      const { op, d, t, s } = parsed;
+      const { op, d, t, s } = parsed
+
+      if (this.client.logRaw) console.log(parsed);
 
       this.lastSequence = s;
 

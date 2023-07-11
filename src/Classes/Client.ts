@@ -9,10 +9,12 @@ export class Client extends EventEmitter {
   gateway: GatewayManager = new GatewayManager(this);
   intents: IntentsManager;
   token: string;
+  logRaw: boolean = false;
 
   constructor(options: ClientOptions) {
     super();
     this.intents = new IntentsManager(options.intents);
+    this.logRaw = options.logRaw;
   }
 
   async login(token: string) {
