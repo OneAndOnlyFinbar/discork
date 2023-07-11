@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./lib && tsc",
-    "dev": "yarn build && node ./test"
+    "dev": "yarn build && node ./test",
+    "document": "npx typedoc ./src --out ./docs"
   },
   "dependencies": {
     "axios": "^1.4.0",
