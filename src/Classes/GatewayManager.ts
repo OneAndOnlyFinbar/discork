@@ -3,14 +3,16 @@ import { WebSocket } from 'ws';
 import { Base } from './Base';
 import { Client } from './Client';
 import { ClientStatus } from '../Types';
+import { Errors } from '../Utils';
 
 export class GatewayManager extends Base {
   ws: WebSocket;
   gatewayURI: string;
   resumeURI: string;
+  sessionID: string;
   lastSequence: number;
 
-  constructor(client: Client){
+  constructor(client: Client) {
     super(client);
   }
 
@@ -26,19 +28,48 @@ export class GatewayManager extends Base {
 
     this.ws.on('message', async (data) => {
       const parsed = JSON.parse(data.toString());
-      const { op, d, t, s } = parsed
+      const { op, d, t, s } = parsed;
 
       if (this.client.logRaw) console.log(parsed);
 
       this.lastSequence = s;
 
       switch (op) {
+        // Dispatch
+        case 0: {
+          switch (t) {
+            case 'READY': {
+              this.client.status = ClientStatus.CONNECTED;
+              this.sessionID = d.session_id;
+              this.resumeURI = d.resume_gateway_url;
+              this.client.emit('ready', d);
+              break;
+            }
+          }
+          break;
+        }
+
         // Heartbeat
         case 1: {
           this.ws.send(JSON.stringify({
             op: 1,
             d: this.lastSequence
           }));
+          break;
+        }
+
+        // Requested Reconnect (Resume)
+        case 7: {
+          this.resume();
+          break;
+        }
+
+        // Invalid Session
+        case 9: {
+          if (d) {
+            this.resume();
+          } else
+            throw new Error(Errors.GATEWAY.INVALID_SESSION);
           break;
         }
 
@@ -53,28 +84,18 @@ export class GatewayManager extends Base {
           await this.authenticate();
           break;
         }
-
-        // Dispatch
-        case 0: {
-          switch (t) {
-            case 'READY': {
-              this.client.status = ClientStatus.CONNECTED;
-              this.client.emit('ready', d);
-            }
-          }
-        }
       }
     });
   }
 
-  sendHeartbeat(){
+  sendHeartbeat() {
     this.ws.send(JSON.stringify({
       op: 1,
       d: this.lastSequence
     }));
   }
 
-  authenticate(){
+  authenticate() {
     this.ws.send(JSON.stringify({
       op: 2,
       d: {
@@ -85,6 +106,17 @@ export class GatewayManager extends Base {
           browser: 'discork',
           device: 'discork'
         }
+      }
+    }));
+  }
+
+  resume() {
+    this.ws.send(JSON.stringify({
+      op: 6,
+      d: {
+        token: this.client.token,
+        session_id: this.sessionID,
+        seq: this.lastSequence
       }
     }));
   }
