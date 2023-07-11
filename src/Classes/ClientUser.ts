@@ -1,11 +1,11 @@
-import { ClientUserConstructorOptions } from '../Types/ClientUserConstructorOptions';
+import { ClientUserConstructorOptions } from '../Types';
+import { User } from './User';
 
-export class ClientUser {
-  public verified: boolean;
+export class ClientUser extends User {
   public username: string;
   public mfaEnabled: boolean;
   public id: string;
-  public global_name: string | null;
+  public globalName: string | null;
   public flags: number;
   public email: null;
   public discriminator: string;
@@ -13,11 +13,11 @@ export class ClientUser {
   public avatar: string | null;
 
   constructor(options: ClientUserConstructorOptions) {
-    this.verified = options.verified;
+    super(options);
     this.username = options.username;
     this.mfaEnabled = options.mfa_enabled;
     this.id = options.id;
-    this.global_name = options.global_name;
+    this.globalName = options.global_name;
     this.flags = options.flags;
     this.email = options.email;
     this.discriminator = options.discriminator;

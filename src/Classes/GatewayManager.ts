@@ -44,7 +44,7 @@ export class GatewayManager extends Base {
               this.sessionID = d.session_id;
               this.resumeURI = d.resume_gateway_url;
               this.client.user = new ClientUser({
-                verified: d.user.verified,
+                client: this.client,
                 username: d.user.username,
                 mfa_enabled: d.user.mfa_enabled,
                 id: d.user.id,

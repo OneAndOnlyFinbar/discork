@@ -1,5 +1,7 @@
 import { EventEmitter } from 'events';
-import { GatewayManager, IntentsManager, ClientUser } from './';
+import { GatewayManager } from './GatewayManager';
+import { IntentsManager } from './IntentsManager';
+import { ClientUser } from './ClientUser';
 import { ClientOptions, ClientStatus } from '../Types';
 import { REST } from '../API';
 
@@ -18,16 +20,16 @@ export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
     super();
     this.intents = new IntentsManager(options.intents);
-    this.logRaw = options.logRaw;
+    this.logRaw = options.logRaw ?? false;
+  }
+
+  on(event: EventTypes, listener: (...args: any[]) => void): this {
+    return super.on(event, listener);
   }
 
   async login(token: string) {
     this.token = token;
     this.status = ClientStatus.CONNECTING;
     await this.gateway.login();
-  }
-
-  on(event: EventTypes, listener: (...args: any[]) => void): this {
-    return super.on(event, listener);
   }
 }

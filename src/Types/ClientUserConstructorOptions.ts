@@ -1,5 +1,7 @@
+import { Client } from '../Classes/Client';
+
 export interface ClientUserConstructorOptions {
-  verified: boolean;
+  client: Client;
   username: string;
   mfa_enabled: boolean;
   id: string;

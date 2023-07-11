@@ -1,18 +1,19 @@
 import axios from 'axios';
-import { Base, Client } from '../Classes';
+import { Base } from '../Classes/Base';
+import { Client } from '../Classes/Client';
 
 export class REST extends Base {
-  token: string;
+  client: Client;
   constructor(client: Client) {
     super(client);
-    this.token = client.token;
+    this.client = client;
   }
 
   async get(url: string) {
-    return await axios.get(url, {
+    return axios.get(url, {
       headers: {
-        Authorization: `Bot ${this.token}`
+        Authorization: `Bot ${this.client.token}`
       }
-    }).then(res => res.data);
+    });
   }
 }
