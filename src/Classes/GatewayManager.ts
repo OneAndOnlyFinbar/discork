@@ -2,10 +2,12 @@ import axios from 'axios';
 import { WebSocket } from 'ws';
 import { Base } from './Base';
 import { Client } from './Client';
+import { ClientStatus } from '../Types';
 
 export class GatewayManager extends Base {
   ws: WebSocket;
   gatewayURI: string;
+  resumeURI: string;
   lastSequence: number;
 
   constructor(client: Client){
@@ -19,14 +21,12 @@ export class GatewayManager extends Base {
     this.ws = new WebSocket(`${this.gatewayURI}?v=10&encoding=json`);
 
     this.ws.on('open', () => {
-      console.log('Connected to gateway');
+      this.client.status = ClientStatus.IDLE;
     });
 
     this.ws.on('message', async (data) => {
       const parsed = JSON.parse(data.toString());
       const { op, d, t, s } = parsed;
-
-      console.log(parsed);
 
       this.lastSequence = s;
 
@@ -52,8 +52,14 @@ export class GatewayManager extends Base {
           break;
         }
 
-        case 9: {
-
+        // Dispatch
+        case 0: {
+          switch (t) {
+            case 'READY': {
+              this.client.status = ClientStatus.CONNECTED;
+              this.client.emit('ready', d);
+            }
+          }
         }
       }
     });

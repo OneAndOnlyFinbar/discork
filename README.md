@@ -9,6 +9,10 @@ const client = new Client({
   intents: ["GUILDS"]
 });
 
+client.on('ready', (data) => {
+  console.log(data);
+})
+
 client.login('TOKEN');
 ```
 
