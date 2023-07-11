@@ -1,12 +1,14 @@
 import { EventEmitter } from 'events';
 import { GatewayManager, IntentsManager, ClientUser } from './';
 import { ClientOptions, ClientStatus } from '../Types';
+import { REST } from '../API';
 
 type EventTypes = 'ready';
 
 export class Client extends EventEmitter {
-  status: ClientStatus = ClientStatus.DISCONNECTED;
   gateway: GatewayManager = new GatewayManager(this);
+  REST: REST = new REST(this);
+  status: ClientStatus = ClientStatus.DISCONNECTED;
   intents: IntentsManager;
   user: ClientUser;
   token: string;
