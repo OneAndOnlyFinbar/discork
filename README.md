@@ -9,8 +9,8 @@ const client = new Client({
   intents: ["GUILDS"]
 });
 
-client.on('ready', (data) => {
-  console.log(data);
+client.on('ready', (client) => {
+  console.log(`Logged in as ${client.user.tag}`);
 })
 
 client.login('TOKEN');

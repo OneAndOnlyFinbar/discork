@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { GatewayManager, IntentsManager } from './';
+import { GatewayManager, IntentsManager, ClientUser } from './';
 import { ClientOptions, ClientStatus } from '../Types';
 
 type EventTypes = 'ready';
@@ -8,7 +8,9 @@ export class Client extends EventEmitter {
   status: ClientStatus = ClientStatus.DISCONNECTED;
   gateway: GatewayManager = new GatewayManager(this);
   intents: IntentsManager;
+  user: ClientUser;
   token: string;
+
   logRaw: boolean = false;
 
   constructor(options: ClientOptions) {

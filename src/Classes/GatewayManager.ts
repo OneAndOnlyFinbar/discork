@@ -2,6 +2,7 @@ import axios from 'axios';
 import { WebSocket } from 'ws';
 import { Base } from './Base';
 import { Client } from './Client';
+import { ClientUser } from './ClientUser';
 import { ClientStatus } from '../Types';
 import { Errors } from '../Utils';
 
@@ -42,7 +43,19 @@ export class GatewayManager extends Base {
               this.client.status = ClientStatus.CONNECTED;
               this.sessionID = d.session_id;
               this.resumeURI = d.resume_gateway_url;
-              this.client.emit('ready', d);
+              this.client.user = new ClientUser({
+                verified: d.user.verified,
+                username: d.user.username,
+                mfa_enabled: d.user.mfa_enabled,
+                id: d.user.id,
+                global_name: d.user.global_name,
+                flags: d.user.flags,
+                email: d.user.email,
+                discriminator: d.user.discriminator,
+                bot: d.user.bot,
+                avatar: d.user.avatar
+              });
+              this.client.emit('ready', this.client);
               break;
             }
           }
