@@ -1,9 +1,8 @@
 import { EventEmitter } from 'events';
-import { GatewayManager } from './GatewayManager';
-import { IntentsManager } from './IntentsManager';
-import { ClientUser } from './ClientUser';
+import { GatewayManager, IntentsManager } from '../Managers/';
 import { ClientOptions, ClientStatus } from '../Types';
 import { REST } from '../API';
+import { ClientUser } from './ClientUser';
 
 type EventTypes = 'ready';
 

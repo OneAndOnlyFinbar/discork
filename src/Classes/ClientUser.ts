@@ -1,12 +1,13 @@
 import { ClientUserConstructorOptions } from '../Types';
 import { User } from './User';
+import { UserFlagsManager } from '../Managers';
 
 export class ClientUser extends User {
   public username: string;
   public mfaEnabled: boolean;
   public id: string;
   public globalName: string | null;
-  public flags: number;
+  public flags: UserFlagsManager;
   public email: null;
   public discriminator: string;
   public bot: boolean;
@@ -18,7 +19,7 @@ export class ClientUser extends User {
     this.mfaEnabled = options.mfa_enabled;
     this.id = options.id;
     this.globalName = options.global_name;
-    this.flags = options.flags;
+    this.flags = new UserFlagsManager(options.flags);
     this.email = options.email;
     this.discriminator = options.discriminator;
     this.bot = options.bot;

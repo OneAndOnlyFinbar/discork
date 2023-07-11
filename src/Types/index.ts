@@ -4,3 +4,4 @@ export * from './ClientStatus';
 export * from './Locale';
 export * from './ClientUserConstructorOptions';
 export * from './UserConstructorOptions';
+export * from './UserFlags';

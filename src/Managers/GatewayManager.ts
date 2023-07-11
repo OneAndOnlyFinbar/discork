@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { WebSocket } from 'ws';
-import { Base } from './Base';
-import { Client } from './Client';
-import { ClientUser } from './ClientUser';
+import { Base } from '../Classes/Base';
+import { Client } from '../Classes/Client';
+import { ClientUser } from '../Classes/ClientUser';
 import { ClientStatus } from '../Types';
 import { Errors } from '../Utils';
 

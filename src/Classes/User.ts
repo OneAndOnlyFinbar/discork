@@ -1,6 +1,7 @@
 import { Base } from './Base';
 import { Locale, UserConstructorOptions } from '../Types';
 import { Routes } from '../API';
+import { UserFlagsManager } from '../Managers/UserFlagsManager';
 
 export class User extends Base {
   id: string;
@@ -14,7 +15,7 @@ export class User extends Base {
   banner: string | null;
   accentColor: number | null;
   locale: Locale;
-  flags: number;
+  flags: UserFlagsManager;
   premiumType: number;
   publicFlags: number;
   bio: string;
@@ -34,7 +35,7 @@ export class User extends Base {
     this.banner = options.banner;
     this.accentColor = options.accent_color;
     this.locale = options.locale;
-    this.flags = options.flags;
+    this.flags = new UserFlagsManager(options.flags);
     this.premiumType = options.premium_type;
     this.publicFlags = options.public_flags;
     this.bio = options.bio;
@@ -56,7 +57,7 @@ export class User extends Base {
       this.avatar = data.avatar;
       this.discriminator = data.discriminator;
       this.publicFlags = data.public_flags;
-      this.flags = data.flags;
+      this.flags = new UserFlagsManager(data.flags);
       this.bot = data.bot;
       this.banner = data.banner;
       this.bannerColor = data.banner_color;
