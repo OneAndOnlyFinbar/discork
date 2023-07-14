@@ -5,4 +5,4 @@ export * from './Locale';
 export * from './ClientUserConstructorOptions';
 export * from './UserConstructorOptions';
 export * from './UserFlags';
-export * from './PremiumTypes';
+export * from './UserPremiumTypes';

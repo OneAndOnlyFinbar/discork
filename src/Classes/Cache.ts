@@ -1,7 +1,10 @@
-export class Cache<T> {
+import { Base } from './Base';
+
+export class Cache<T> extends Base {
   cache: { [key: string]: T };
 
-  constructor() {
+  constructor(client) {
+    super(client);
     this.cache = {};
   }
 

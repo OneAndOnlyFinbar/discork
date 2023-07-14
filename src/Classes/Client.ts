@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { GatewayManager, IntentsManager } from '../Managers/';
+import { GatewayManager, IntentsManager, GuildManager } from '../Managers';
 import { ClientOptions, ClientStatus } from '../Types';
 import { REST } from '../API';
 import { ClientUser } from './ClientUser';
@@ -12,6 +12,7 @@ export class Client extends EventEmitter {
   status: ClientStatus = ClientStatus.DISCONNECTED;
   intents: IntentsManager;
   user: ClientUser;
+  guilds: GuildManager = new GuildManager(this);
   token: string;
 
   logRaw: boolean = false;
