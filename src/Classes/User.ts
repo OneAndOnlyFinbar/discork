@@ -2,7 +2,7 @@ import { Base } from './Base';
 import { Locale, UserConstructorOptions } from '../Types';
 import { Routes } from '../API';
 import { UserFlagsManager } from '../Managers';
-import { PremiumTypes } from '../Types';
+import { UserPremiumTypes } from '../Types';
 
 export class User extends Base {
   id: string;
@@ -17,7 +17,7 @@ export class User extends Base {
   accentColor: number | null;
   locale: Locale;
   flags: UserFlagsManager;
-  premiumType: PremiumTypes;
+  premiumType: UserPremiumTypes;
   publicFlags: number;
   bio: string;
   bannerColor: number | null;
