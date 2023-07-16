@@ -10,7 +10,8 @@ import {
   GuildPremiumTier,
   GuildSystemChannelFlags,
   GuildVerificationLevel,
-  Locale
+  Locale,
+  WelcomeScreen
 } from '../Types';
 
 export class Guild extends Base {
@@ -55,8 +56,7 @@ export class Guild extends Base {
   maxStageVideoChannelUsers: number;
   approximateMemberCount: number;
   approximatePresenceCount: number;
-  // TODO: https://discord.com/developers/docs/resources/guild#welcome-screen-object
-  welcomeScreen: any;
+  welcomeScreen: WelcomeScreen;
   NSFWLevel: GuildNSFWLevel;
   // TODO: StickersManager https://discord.com/developers/docs/resources/sticker#sticker-object
   stickers: any[];
@@ -83,7 +83,7 @@ export class Guild extends Base {
   constructor(client: Client, data: Partial<Guild>) {
     super(client);
 
-    for(const [key, value] of Object.entries(data))
+    for (const [key, value] of Object.entries(data))
       this[key] = value;
   }
 }

@@ -107,7 +107,15 @@ export class GatewayManager extends Base {
                     maxVideoChannelUsers: d.max_video_channel_users,
                     approximateMemberCount: d.approximate_member_count,
                     approximatePresenceCount: d.approximate_presence_count,
-                    welcomeScreen: d.welcome_screen,
+                    welcomeScreen: {
+                      description: d.welcome_screen?.description,
+                      welcomeChannels: d.welcome_screen?.welcome_channels.map((c: any) => ({
+                        channelId: c.channel_id,
+                        description: c.description,
+                        emojiId: c.emoji_id,
+                        emojiName: c.emoji_name
+                      }))
+                    },
                     NSFWLevel: d.nsfw_level,
                     stickers: d.stickers,
                     premiumProgressBarEnabled: d.premium_progress_bar_enabled,

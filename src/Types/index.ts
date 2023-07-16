@@ -14,3 +14,5 @@ export * from './GuildNSFWLevel';
 export * from './GuildPremiumTier';
 export * from './GuildSystemChannelFlags';
 export * from './GuildFeature';
+export * from './WelcomeScreen';
+export * from './WelcomeScreenChannel';
