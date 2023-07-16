@@ -11,8 +11,10 @@ import {
   GuildSystemChannelFlags,
   GuildVerificationLevel,
   Locale,
-  WelcomeScreen
+  WelcomeScreen,
+  WelcomeScreenChannel
 } from '../Types';
+import { Routes } from '../API';
 
 export class Guild extends Base {
   available: boolean;
@@ -85,5 +87,27 @@ export class Guild extends Base {
 
     for (const [key, value] of Object.entries(data))
       this[key] = value;
+  }
+
+  async fetchWelcomeScreen() {
+    const { data, status } = await this.client.REST.get(Routes.Guilds.GetWelcomeScreen(this.id));
+
+    if (status === 200)
+      this.welcomeScreen = data;
+
+    return this.welcomeScreen;
+  }
+
+  async setWelcomeScreen({ enabled, description, channels }: {
+    enabled?: boolean,
+    description?: string,
+    channels?: Array<WelcomeScreenChannel>
+  }) {
+    const { data, status } = await this.client.REST.patch(Routes.Guilds.SetWelcomeScreen(this.id, enabled, description, channels));
+
+    if (status === 200)
+      this.welcomeScreen = data;
+
+    return this.welcomeScreen;
   }
 }
