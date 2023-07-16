@@ -1,11 +1,8 @@
 import axios from 'axios';
 import { WebSocket } from 'ws';
-import { Base } from '../Classes/Base';
-import { Client } from '../Classes/Client';
-import { ClientUser } from '../Classes/ClientUser';
+import { Base, Client, ClientUser, Guild, GuildMemberPermissionsManager } from '../Classes';
 import { ClientStatus } from '../Types';
 import { Errors } from '../Utils';
-import { Guild, GuildMemberPermissionsManager } from '../Classes';
 
 export class GatewayManager extends Base {
   ws: WebSocket;

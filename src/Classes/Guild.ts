@@ -90,10 +90,7 @@ export class Guild extends Base {
   }
 
   async fetchWelcomeScreen() {
-    const { data, status } = await this.client.REST.get(Routes.Guilds.GetWelcomeScreen(this.id));
-
-    if (status === 200)
-      this.welcomeScreen = data;
+    this.welcomeScreen = await this.client.REST.get(Routes.Guilds.GetWelcomeScreen(this.id));
 
     return this.welcomeScreen;
   }
@@ -103,11 +100,7 @@ export class Guild extends Base {
     description?: string,
     channels?: Array<WelcomeScreenChannel>
   }) {
-    const { data, status } = await this.client.REST.patch(Routes.Guilds.SetWelcomeScreen(this.id, enabled, description, channels));
-
-    if (status === 200)
-      this.welcomeScreen = data;
-
+    this.welcomeScreen = await this.client.REST.patch(Routes.Guilds.SetWelcomeScreen(this.id, enabled, description, channels));
     return this.welcomeScreen;
   }
 }

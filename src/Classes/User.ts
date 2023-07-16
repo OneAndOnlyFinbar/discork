@@ -1,8 +1,7 @@
 import { Base } from './Base';
-import { Locale, UserConstructorOptions } from '../Types';
+import { Locale, UserConstructorOptions, UserPremiumTypes } from '../Types';
 import { Routes } from '../API';
 import { UserFlagsManager } from '../Managers';
-import { UserPremiumTypes } from '../Types';
 
 export class User extends Base {
   id: string;
@@ -45,30 +44,24 @@ export class User extends Base {
   }
 
   async fetch() {
-    let data, status;
-    if (this.client.user.id === this.id)
-      ({ data, status } = await this.client.REST.get(Routes.Users.Me));
-    else
-      ({ data, status } = await this.client.REST.get(Routes.Users.ById(this.id)));
+    const data = await this.client.REST.get(this.client.user.id === this.id ? Routes.Users.Me : Routes.Users.ById(this.id));
 
-    if(status === 200) {
-      this.id = data.id;
-      this.username = data.username;
-      this.globalName = data.global_name;
-      this.avatar = data.avatar;
-      this.discriminator = data.discriminator;
-      this.publicFlags = data.public_flags;
-      this.flags = new UserFlagsManager(data.flags);
-      this.bot = data.bot;
-      this.banner = data.banner;
-      this.bannerColor = data.banner_color;
-      this.accentColor = data.accent_color;
-      this.bio = data.bio;
-      this.locale = data.locale;
-      this.mfaEnabled = data.mfa_enabled;
-      this.premiumType = data.premium_type;
-      this.verified = data.verified;
-    }
+    this.id = data.id;
+    this.username = data.username;
+    this.globalName = data.global_name;
+    this.avatar = data.avatar;
+    this.discriminator = data.discriminator;
+    this.publicFlags = data.public_flags;
+    this.flags = new UserFlagsManager(data.flags);
+    this.bot = data.bot;
+    this.banner = data.banner;
+    this.bannerColor = data.banner_color;
+    this.accentColor = data.accent_color;
+    this.bio = data.bio;
+    this.locale = data.locale;
+    this.mfaEnabled = data.mfa_enabled;
+    this.premiumType = data.premium_type;
+    this.verified = data.verified;
 
     return this;
   }
