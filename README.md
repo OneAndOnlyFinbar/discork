@@ -2,6 +2,8 @@
 
 A work in progress library for interacting with the discord API.
 
+![logo](https://raw.githubusercontent.com/oneandonlyfinbar/discork/master/.github/assets/logo.png)
+
 ```js
 import { Client } from 'discork';
 
