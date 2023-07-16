@@ -186,6 +186,8 @@ export class GatewayManager extends Base {
                     events: d.guild_scheduled_events,
                   }));
               }
+
+              this.client.emit('guildCreate', this.client.guilds.cache.get(d.id));
             }
           }
           break;

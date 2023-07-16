@@ -4,7 +4,7 @@ import { ClientOptions, ClientStatus } from '../Types';
 import { REST } from '../API';
 import { ClientUser } from './ClientUser';
 
-type EventTypes = 'ready';
+type EventTypes = 'ready' | 'guildCreate';
 
 export class Client extends EventEmitter {
   gateway: GatewayManager = new GatewayManager(this);
