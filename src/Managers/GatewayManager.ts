@@ -70,6 +70,7 @@ export class GatewayManager extends Base {
                   });
                 else
                   this.client.guilds.cache._update(d.id, {
+                    id: d.id,
                     available: !d.unavailable,
                     name: d.name,
                     icon: d.icon,
@@ -139,6 +140,7 @@ export class GatewayManager extends Base {
                   });
                 else
                   this.client.guilds.cache.set(d.id, new Guild(this.client, {
+                    id: d.id,
                     available: !d.unavailable,
                     name: d.name,
                     icon: d.icon,

@@ -20,6 +20,7 @@ export class GuildManager extends Base {
 
     if (status === 200) {
       this.cache._update(id, {
+        id: data.id,
         name: data.name,
         icon: data.icon,
         description: data.description,
