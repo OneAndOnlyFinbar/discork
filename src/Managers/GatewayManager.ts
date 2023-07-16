@@ -112,7 +112,17 @@ export class GatewayManager extends Base {
                     stickers: d.stickers,
                     premiumProgressBarEnabled: d.premium_progress_bar_enabled,
                     safetyAlertsChannelId: d.safety_alerts_channel_id,
-                    maxStageVideoChannelUsers: d.max_stage_video_channel_users
+                    maxStageVideoChannelUsers: d.max_stage_video_channel_users,
+                    joinedAt: new Date(d.joined_at),
+                    large: d.large,
+                    memberCount: d.member_count,
+                    voiceStates: d.voice_states,
+                    members: d.members,
+                    channels: d.channels,
+                    threads: d.threads,
+                    presences: d.presences,
+                    stageInstances: d.stage_instances,
+                    events: d.guild_scheduled_events
                   });
               } else {
                 if (d.unavailable)
@@ -163,7 +173,17 @@ export class GatewayManager extends Base {
                     stickers: d.stickers,
                     premiumProgressBarEnabled: d.premium_progress_bar_enabled,
                     safetyAlertsChannelId: d.safety_alerts_channel_id,
-                    maxStageVideoChannelUsers: d.max_stage_video_channel_users
+                    maxStageVideoChannelUsers: d.max_stage_video_channel_users,
+                    joinedAt: new Date(d.joined_at),
+                    large: d.large,
+                    memberCount: d.member_count,
+                    voiceStates: d.voice_states,
+                    members: d.members,
+                    channels: d.channels,
+                    threads: d.threads,
+                    presences: d.presences,
+                    stageInstances: d.stage_instances,
+                    events: d.guild_scheduled_events,
                   }));
               }
             }

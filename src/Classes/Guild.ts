@@ -62,6 +62,23 @@ export class Guild extends Base {
   stickers: any[];
   premiumProgressBarEnabled: boolean;
   safetyAlertsChannelId: string;
+  joinedAt: Date;
+  large: boolean;
+  memberCount: number;
+  // TODO: VoiceStateManager
+  voiceStates: any[];
+  // TODO: GuildMemberManager
+  members: any[];
+  // TODO: GuildChannelManager
+  channels: any[];
+  // TODO: GuildThreadsManager
+  threads: any[];
+  // TODO: GuildPresencesManager
+  presences: any[];
+  // TODO: GuildStageInstancesManager
+  stageInstances: any[];
+  // TODO: GuildEventsManager
+  events: any[];
 
   constructor(client: Client, data: { [key: string]: any }) {
     super(client);
