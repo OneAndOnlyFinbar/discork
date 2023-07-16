@@ -166,7 +166,6 @@ export class GatewayManager extends Base {
                     maxVideoChannelUsers: d.max_video_channel_users,
                     approximateMemberCount: d.approximate_member_count,
                     approximatePresenceCount: d.approximate_presence_count,
-                    welcomeScreen: d.welcome_screen,
                     NSFWLevel: d.nsfw_level,
                     stickers: d.stickers,
                     premiumProgressBarEnabled: d.premium_progress_bar_enabled,
