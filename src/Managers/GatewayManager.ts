@@ -5,6 +5,7 @@ import { Client } from '../Classes/Client';
 import { ClientUser } from '../Classes/ClientUser';
 import { ClientStatus } from '../Types';
 import { Errors } from '../Utils';
+import { Guild, GuildMemberPermissionsManager } from '../Classes';
 
 export class GatewayManager extends Base {
   ws: WebSocket;
@@ -57,6 +58,114 @@ export class GatewayManager extends Base {
               });
               this.client.emit('ready', this.client);
               break;
+            }
+            case 'GUILD_CREATE': {
+              const cacheExists = this.client.guilds.cache.has(d.id);
+
+              if (cacheExists) {
+                if (d.unavailable)
+                  this.client.guilds.cache.set(d.id, {
+                    id: d.id,
+                    available: false
+                  });
+                else
+                  this.client.guilds.cache._update(d.id, {
+                    available: !d.unavailable,
+                    name: d.name,
+                    icon: d.icon,
+                    iconHash: d.icon_hash,
+                    splash: d.splash,
+                    discoverySplash: d.discovery_splash,
+                    owner: this.client.user.id === d.owner_id,
+                    ownerId: d.owner_id,
+                    permissions: new GuildMemberPermissionsManager({ client: this.client, permissionsBitField: d.permissions }),
+                    region: d.region,
+                    afkChannelId: d.afk_channel_id,
+                    afkTimeout: d.afk_timeout,
+                    widgetEnabled: d.widget_enabled,
+                    widgetChannelId: d.widget_channel_id,
+                    verificationLevel: d.verification_level,
+                    defaultMessageNotifications: d.default_message_notifications,
+                    explicitContentFilter: d.explicit_content_filter,
+                    roles: d.roles,
+                    emojis: d.emojis,
+                    features: d.features,
+                    mfaLevel: d.mfa_level,
+                    applicationId: d.application_id,
+                    systemChannelId: d.system_channel_id,
+                    systemChannelFlags: d.system_channel_flags,
+                    rulesChannelId: d.rules_channel_id,
+                    maxPresences: d.max_presences,
+                    maxMembers: d.max_members,
+                    vanityURLCode: d.vanity_url_code,
+                    description: d.description,
+                    banner: d.banner,
+                    premiumTier: d.premium_tier,
+                    premiumSubscriptionCount: d.premium_subscription_count,
+                    preferredLocale: d.preferred_locale,
+                    publicUpdatesChannelId: d.public_updates_channel_id,
+                    maxVideoChannelUsers: d.max_video_channel_users,
+                    approximateMemberCount: d.approximate_member_count,
+                    approximatePresenceCount: d.approximate_presence_count,
+                    welcomeScreen: d.welcome_screen,
+                    NSFWLevel: d.nsfw_level,
+                    stickers: d.stickers,
+                    premiumProgressBarEnabled: d.premium_progress_bar_enabled,
+                    safetyAlertsChannelId: d.safety_alerts_channel_id,
+                    maxStageVideoChannelUsers: d.max_stage_video_channel_users
+                  });
+              } else {
+                if (d.unavailable)
+                  this.client.guilds.cache._update(d.id, {
+                    available: false
+                  });
+                else
+                  this.client.guilds.cache.set(d.id, new Guild(this.client, {
+                    available: !d.unavailable,
+                    name: d.name,
+                    icon: d.icon,
+                    iconHash: d.icon_hash,
+                    splash: d.splash,
+                    discoverySplash: d.discovery_splash,
+                    owner: this.client.user.id === d.owner_id,
+                    ownerId: d.owner_id,
+                    permissions: new GuildMemberPermissionsManager({ client: this.client, permissionsBitField: d.permissions }),
+                    region: d.region,
+                    afkChannelId: d.afk_channel_id,
+                    afkTimeout: d.afk_timeout,
+                    widgetEnabled: d.widget_enabled,
+                    widgetChannelId: d.widget_channel_id,
+                    verificationLevel: d.verification_level,
+                    defaultMessageNotifications: d.default_message_notifications,
+                    explicitContentFilter: d.explicit_content_filter,
+                    roles: d.roles,
+                    emojis: d.emojis,
+                    features: d.features,
+                    mfaLevel: d.mfa_level,
+                    applicationId: d.application_id,
+                    systemChannelId: d.system_channel_id,
+                    systemChannelFlags: d.system_channel_flags,
+                    rulesChannelId: d.rules_channel_id,
+                    maxPresences: d.max_presences,
+                    maxMembers: d.max_members,
+                    vanityUrlCode: d.vanity_url_code,
+                    description: d.description,
+                    banner: d.banner,
+                    premiumTier: d.premium_tier,
+                    premiumSubscriptionCount: d.premium_subscription_count,
+                    preferredLocale: d.preferred_locale,
+                    publicUpdatesChannelId: d.public_updates_channel_id,
+                    maxVideoChannelUsers: d.max_video_channel_users,
+                    approximateMemberCount: d.approximate_member_count,
+                    approximatePresenceCount: d.approximate_presence_count,
+                    welcomeScreen: d.welcome_screen,
+                    NSFWLevel: d.nsfw_level,
+                    stickers: d.stickers,
+                    premiumProgressBarEnabled: d.premium_progress_bar_enabled,
+                    safetyAlertsChannelId: d.safety_alerts_channel_id,
+                    maxStageVideoChannelUsers: d.max_stage_video_channel_users
+                  }));
+              }
             }
           }
           break;

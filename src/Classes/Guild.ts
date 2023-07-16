@@ -14,12 +14,13 @@ import {
 } from '../Types';
 
 export class Guild extends Base {
+  available: boolean;
   id: string;
   name: string;
   icon: string;
   iconHash: string;
   splash: string;
-  discovery_splash: string;
+  discoverySplash: string;
   owner: boolean;
   ownerId: string;
   permissions: GuildMemberPermissionsManager;
@@ -40,13 +41,14 @@ export class Guild extends Base {
   applicationId: string;
   systemChannelId: string;
   systemChannelFlags: GuildSystemChannelFlags;
+  rulesChannelId: string;
   maxPresences: number;
   maxMembers: number;
   vanityUrlCode: string;
   description: string;
   banner: string;
   premiumTier: GuildPremiumTier;
-  premiumSubscriptionCont: number;
+  premiumSubscriptionCount: number;
   preferredLocale: Locale;
   publicUpdatesChannelId: string;
   maxVideoChannelUsers: number;
@@ -61,7 +63,10 @@ export class Guild extends Base {
   premiumProgressBarEnabled: boolean;
   safetyAlertsChannelId: string;
 
-  constructor({ client }: { client: Client }) {
+  constructor(client: Client, data: { [key: string]: any }) {
     super(client);
+
+    for(const [key, value] of Object.entries(data))
+      this[key] = value;
   }
 }

@@ -1,18 +1,31 @@
 import { Base } from './Base';
 
 export class Cache<T> extends Base {
-  cache: { [key: string]: T };
+  cache: { [key: string]: Partial<T> };
 
   constructor(client) {
     super(client);
     this.cache = {};
   }
 
-  get(key: string): T {
+  get(key: string): Partial<T> {
     return this.cache[key];
   }
 
-  set(key: string, value: T): void {
+  set(key: string, value: Partial<T>): void {
     this.cache[key] = value;
+  }
+
+  has(key: string): boolean {
+    return this.cache[key] !== undefined;
+  }
+
+  _update(key: string, data: { [key: string]: any }): void {
+    const cache = this.cache[key];
+    if (!cache)
+      this.cache[key] = data as Partial<T>;
+    else
+      for (const [k, v] of Object.entries(data))
+        cache[k] = v;
   }
 }
