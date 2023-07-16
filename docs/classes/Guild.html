@@ -22,7 +22,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">Guild</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L16">src/Classes/Guild.ts:16</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L19">src/Classes/Guild.ts:19</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -89,6 +89,11 @@
 <a href="Guild.html#welcomeScreen" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>welcome<wbr/>Screen</span></a>
 <a href="Guild.html#widgetChannelId" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>widget<wbr/>Channel<wbr/>Id</span></a>
 <a href="Guild.html#widgetEnabled" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>widget<wbr/>Enabled</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Methods</h3>
+<div class="tsd-index-list"><a href="Guild.html#fetchWelcomeScreen" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-2048"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)"></path></g></svg><span>fetch<wbr/>Welcome<wbr/>Screen</span></a>
+<a href="Guild.html#setWelcomeScreen" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Welcome<wbr/>Screen</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
@@ -103,292 +108,319 @@
 <li>
 <h5><span class="tsd-kind-parameter">client</span>: <a href="Client.html" class="tsd-signature-type tsd-kind-class">Client</a></h5></li>
 <li>
-<h5><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
-<ul class="tsd-parameters">
-<li class="tsd-parameter-index-signature">
-<h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5></li></ul></li></ul></div>
+<h5><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type ">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="Guild.html" class="tsd-signature-type tsd-kind-class">Guild</a><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Guild.html" class="tsd-signature-type tsd-kind-class">Guild</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="Base.html">Base</a>.<a href="Base.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L83">src/Classes/Guild.ts:83</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L85">src/Classes/Guild.ts:85</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member"><a id="NSFWLevel" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>NSFWLevel</span><a href="#NSFWLevel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">NSFWLevel</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildNSFWLevel.html" class="tsd-signature-type tsd-kind-enum">GuildNSFWLevel</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L60">src/Classes/Guild.ts:60</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L62">src/Classes/Guild.ts:62</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="afkChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>afk<wbr/>Channel<wbr/>Id</span><a href="#afkChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">afk<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L28">src/Classes/Guild.ts:28</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L31">src/Classes/Guild.ts:31</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="afkTimeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>afk<wbr/>Timeout</span><a href="#afkTimeout" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">afk<wbr/>Timeout</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L29">src/Classes/Guild.ts:29</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L32">src/Classes/Guild.ts:32</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="applicationId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>application<wbr/>Id</span><a href="#applicationId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">application<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L41">src/Classes/Guild.ts:41</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L44">src/Classes/Guild.ts:44</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="approximateMemberCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>approximate<wbr/>Member<wbr/>Count</span><a href="#approximateMemberCount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">approximate<wbr/>Member<wbr/>Count</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L56">src/Classes/Guild.ts:56</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L59">src/Classes/Guild.ts:59</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="approximatePresenceCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>approximate<wbr/>Presence<wbr/>Count</span><a href="#approximatePresenceCount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">approximate<wbr/>Presence<wbr/>Count</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L57">src/Classes/Guild.ts:57</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L60">src/Classes/Guild.ts:60</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="available" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>available</span><a href="#available" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">available</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L17">src/Classes/Guild.ts:17</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L20">src/Classes/Guild.ts:20</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="banner" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>banner</span><a href="#banner" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">banner</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L49">src/Classes/Guild.ts:49</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L52">src/Classes/Guild.ts:52</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="channels" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>channels</span><a href="#channels" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">channels</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L73">src/Classes/Guild.ts:73</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L75">src/Classes/Guild.ts:75</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="client" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>client</span><a href="#client" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">client</span><span class="tsd-signature-symbol">:</span> <a href="Client.html" class="tsd-signature-type tsd-kind-class">Client</a></div><aside class="tsd-sources">
 <p>Inherited from <a href="Base.html">Base</a>.<a href="Base.html#client">client</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Base.ts#L4">src/Classes/Base.ts:4</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Base.ts#L4">src/Classes/Base.ts:4</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="defaultMessageNotifications" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>default<wbr/>Message<wbr/>Notifications</span><a href="#defaultMessageNotifications" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">default<wbr/>Message<wbr/>Notifications</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildMessageNotificationLevel.html" class="tsd-signature-type tsd-kind-enum">GuildMessageNotificationLevel</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L33">src/Classes/Guild.ts:33</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L36">src/Classes/Guild.ts:36</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="description" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>description</span><a href="#description" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">description</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L48">src/Classes/Guild.ts:48</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L51">src/Classes/Guild.ts:51</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="discoverySplash" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>discovery<wbr/>Splash</span><a href="#discoverySplash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">discovery<wbr/>Splash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L23">src/Classes/Guild.ts:23</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L26">src/Classes/Guild.ts:26</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="emojis" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emojis</span><a href="#emojis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">emojis</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L38">src/Classes/Guild.ts:38</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L41">src/Classes/Guild.ts:41</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="events" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>events</span><a href="#events" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">events</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L81">src/Classes/Guild.ts:81</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L83">src/Classes/Guild.ts:83</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="explicitContentFilter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>explicit<wbr/>Content<wbr/>Filter</span><a href="#explicitContentFilter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">explicit<wbr/>Content<wbr/>Filter</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildExplicitContentFilterLevel.html" class="tsd-signature-type tsd-kind-enum">GuildExplicitContentFilterLevel</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L34">src/Classes/Guild.ts:34</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L37">src/Classes/Guild.ts:37</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="features" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>features</span><a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">features</span><span class="tsd-signature-symbol">:</span> <a href="../types/GuildFeature.html" class="tsd-signature-type tsd-kind-type-alias">GuildFeature</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L39">src/Classes/Guild.ts:39</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L42">src/Classes/Guild.ts:42</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="icon" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>icon</span><a href="#icon" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">icon</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L20">src/Classes/Guild.ts:20</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L23">src/Classes/Guild.ts:23</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="iconHash" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>icon<wbr/>Hash</span><a href="#iconHash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">icon<wbr/>Hash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L21">src/Classes/Guild.ts:21</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L24">src/Classes/Guild.ts:24</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L18">src/Classes/Guild.ts:18</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L21">src/Classes/Guild.ts:21</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="joinedAt" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>joined<wbr/>At</span><a href="#joinedAt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">joined<wbr/>At</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Date</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L65">src/Classes/Guild.ts:65</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L67">src/Classes/Guild.ts:67</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="large" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>large</span><a href="#large" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">large</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L66">src/Classes/Guild.ts:66</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L68">src/Classes/Guild.ts:68</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="maxMembers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>max<wbr/>Members</span><a href="#maxMembers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">max<wbr/>Members</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L46">src/Classes/Guild.ts:46</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L49">src/Classes/Guild.ts:49</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="maxPresences" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>max<wbr/>Presences</span><a href="#maxPresences" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">max<wbr/>Presences</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L45">src/Classes/Guild.ts:45</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L48">src/Classes/Guild.ts:48</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="maxStageVideoChannelUsers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>max<wbr/>Stage<wbr/>Video<wbr/>Channel<wbr/>Users</span><a href="#maxStageVideoChannelUsers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">max<wbr/>Stage<wbr/>Video<wbr/>Channel<wbr/>Users</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L55">src/Classes/Guild.ts:55</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L58">src/Classes/Guild.ts:58</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="maxVideoChannelUsers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>max<wbr/>Video<wbr/>Channel<wbr/>Users</span><a href="#maxVideoChannelUsers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">max<wbr/>Video<wbr/>Channel<wbr/>Users</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L54">src/Classes/Guild.ts:54</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L57">src/Classes/Guild.ts:57</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="memberCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>member<wbr/>Count</span><a href="#memberCount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">member<wbr/>Count</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L67">src/Classes/Guild.ts:67</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L69">src/Classes/Guild.ts:69</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="members" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>members</span><a href="#members" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">members</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L71">src/Classes/Guild.ts:71</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L73">src/Classes/Guild.ts:73</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="mfaLevel" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mfa<wbr/>Level</span><a href="#mfaLevel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">mfa<wbr/>Level</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildMFALevel.html" class="tsd-signature-type tsd-kind-enum">GuildMFALevel</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L40">src/Classes/Guild.ts:40</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L43">src/Classes/Guild.ts:43</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L19">src/Classes/Guild.ts:19</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L22">src/Classes/Guild.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="owner" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>owner</span><a href="#owner" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">owner</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L24">src/Classes/Guild.ts:24</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L27">src/Classes/Guild.ts:27</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ownerId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>owner<wbr/>Id</span><a href="#ownerId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">owner<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L25">src/Classes/Guild.ts:25</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L28">src/Classes/Guild.ts:28</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="permissions" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>permissions</span><a href="#permissions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">permissions</span><span class="tsd-signature-symbol">:</span> <a href="GuildMemberPermissionsManager.html" class="tsd-signature-type tsd-kind-class">GuildMemberPermissionsManager</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L26">src/Classes/Guild.ts:26</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L29">src/Classes/Guild.ts:29</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="preferredLocale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>preferred<wbr/>Locale</span><a href="#preferredLocale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">preferred<wbr/>Locale</span><span class="tsd-signature-symbol">:</span> <a href="../types/Locale.html" class="tsd-signature-type tsd-kind-type-alias">Locale</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L52">src/Classes/Guild.ts:52</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L55">src/Classes/Guild.ts:55</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="premiumProgressBarEnabled" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premium<wbr/>Progress<wbr/>Bar<wbr/>Enabled</span><a href="#premiumProgressBarEnabled" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premium<wbr/>Progress<wbr/>Bar<wbr/>Enabled</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L63">src/Classes/Guild.ts:63</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L65">src/Classes/Guild.ts:65</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="premiumSubscriptionCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premium<wbr/>Subscription<wbr/>Count</span><a href="#premiumSubscriptionCount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premium<wbr/>Subscription<wbr/>Count</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L51">src/Classes/Guild.ts:51</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L54">src/Classes/Guild.ts:54</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="premiumTier" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premium<wbr/>Tier</span><a href="#premiumTier" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premium<wbr/>Tier</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildPremiumTier.html" class="tsd-signature-type tsd-kind-enum">GuildPremiumTier</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L50">src/Classes/Guild.ts:50</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L53">src/Classes/Guild.ts:53</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="presences" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>presences</span><a href="#presences" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">presences</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L77">src/Classes/Guild.ts:77</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L79">src/Classes/Guild.ts:79</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="publicUpdatesChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>public<wbr/>Updates<wbr/>Channel<wbr/>Id</span><a href="#publicUpdatesChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">public<wbr/>Updates<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L53">src/Classes/Guild.ts:53</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L56">src/Classes/Guild.ts:56</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="region" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>region</span><a href="#region" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">region</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#39;deprecated&#39;</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">region</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L27">src/Classes/Guild.ts:27</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L30">src/Classes/Guild.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="roles" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>roles</span><a href="#roles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">roles</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L36">src/Classes/Guild.ts:36</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L39">src/Classes/Guild.ts:39</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="rulesChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rules<wbr/>Channel<wbr/>Id</span><a href="#rulesChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">rules<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L44">src/Classes/Guild.ts:44</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L47">src/Classes/Guild.ts:47</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="safetyAlertsChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>safety<wbr/>Alerts<wbr/>Channel<wbr/>Id</span><a href="#safetyAlertsChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">safety<wbr/>Alerts<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L64">src/Classes/Guild.ts:64</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L66">src/Classes/Guild.ts:66</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="splash" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>splash</span><a href="#splash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">splash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L22">src/Classes/Guild.ts:22</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L25">src/Classes/Guild.ts:25</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="stageInstances" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stage<wbr/>Instances</span><a href="#stageInstances" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stage<wbr/>Instances</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L79">src/Classes/Guild.ts:79</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L81">src/Classes/Guild.ts:81</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="stickers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stickers</span><a href="#stickers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stickers</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L62">src/Classes/Guild.ts:62</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L64">src/Classes/Guild.ts:64</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="systemChannelFlags" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>system<wbr/>Channel<wbr/>Flags</span><a href="#systemChannelFlags" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">system<wbr/>Channel<wbr/>Flags</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildSystemChannelFlags.html" class="tsd-signature-type tsd-kind-enum">GuildSystemChannelFlags</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L43">src/Classes/Guild.ts:43</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L46">src/Classes/Guild.ts:46</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="systemChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>system<wbr/>Channel<wbr/>Id</span><a href="#systemChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">system<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L42">src/Classes/Guild.ts:42</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L45">src/Classes/Guild.ts:45</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="threads" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>threads</span><a href="#threads" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">threads</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L75">src/Classes/Guild.ts:75</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L77">src/Classes/Guild.ts:77</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="vanityUrlCode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>vanity<wbr/>Url<wbr/>Code</span><a href="#vanityUrlCode" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">vanity<wbr/>Url<wbr/>Code</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L47">src/Classes/Guild.ts:47</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L50">src/Classes/Guild.ts:50</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="verificationLevel" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>verification<wbr/>Level</span><a href="#verificationLevel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">verification<wbr/>Level</span><span class="tsd-signature-symbol">:</span> <a href="../enums/GuildVerificationLevel.html" class="tsd-signature-type tsd-kind-enum">GuildVerificationLevel</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L32">src/Classes/Guild.ts:32</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L35">src/Classes/Guild.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="voiceStates" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>voice<wbr/>States</span><a href="#voiceStates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">voice<wbr/>States</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L69">src/Classes/Guild.ts:69</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L71">src/Classes/Guild.ts:71</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="welcomeScreen" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>welcome<wbr/>Screen</span><a href="#welcomeScreen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">welcome<wbr/>Screen</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">welcome<wbr/>Screen</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/WelcomeScreen.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreen</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L59">src/Classes/Guild.ts:59</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L61">src/Classes/Guild.ts:61</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="widgetChannelId" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>widget<wbr/>Channel<wbr/>Id</span><a href="#widgetChannelId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">widget<wbr/>Channel<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L31">src/Classes/Guild.ts:31</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L34">src/Classes/Guild.ts:34</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="widgetEnabled" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>widget<wbr/>Enabled</span><a href="#widgetEnabled" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">widget<wbr/>Enabled</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/49a982a/src/Classes/Guild.ts#L30">src/Classes/Guild.ts:30</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L33">src/Classes/Guild.ts:33</a></li></ul></aside></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Methods</h2>
+<section class="tsd-panel tsd-member"><a id="fetchWelcomeScreen" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>fetch<wbr/>Welcome<wbr/>Screen</span><a href="#fetchWelcomeScreen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="fetchWelcomeScreen.fetchWelcomeScreen-1"><span class="tsd-kind-call-signature">fetch<wbr/>Welcome<wbr/>Screen</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/WelcomeScreen.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreen</a><span class="tsd-signature-symbol">&gt;</span><a href="#fetchWelcomeScreen.fetchWelcomeScreen-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/WelcomeScreen.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreen</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L92">src/Classes/Guild.ts:92</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="setWelcomeScreen" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>set<wbr/>Welcome<wbr/>Screen</span><a href="#setWelcomeScreen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="setWelcomeScreen.setWelcomeScreen-1"><span class="tsd-kind-call-signature">set<wbr/>Welcome<wbr/>Screen</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">__namedParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/WelcomeScreen.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreen</a><span class="tsd-signature-symbol">&gt;</span><a href="#setWelcomeScreen.setWelcomeScreen-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">__namedParameters</span>: <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">channels</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/WelcomeScreenChannel.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreenChannel</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">description</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">enabled</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">channels</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/WelcomeScreenChannel.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreenChannel</a><span class="tsd-signature-symbol">[]</span></h5></li>
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">description</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5></li>
+<li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">enabled</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/WelcomeScreen.html" class="tsd-signature-type tsd-kind-interface">WelcomeScreen</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/OneAndonlyFinbar/discork/blob/86bc291/src/Classes/Guild.ts#L101">src/Classes/Guild.ts:101</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -463,7 +495,9 @@
 <li><a href="#voiceStates" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>voice<wbr/>States</span></a></li>
 <li><a href="#welcomeScreen" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>welcome<wbr/>Screen</span></a></li>
 <li><a href="#widgetChannelId" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>widget<wbr/>Channel<wbr/>Id</span></a></li>
-<li><a href="#widgetEnabled" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>widget<wbr/>Enabled</span></a></li></ul></div></details></div>
+<li><a href="#widgetEnabled" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>widget<wbr/>Enabled</span></a></li>
+<li><a href="#fetchWelcomeScreen" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>fetch<wbr/>Welcome<wbr/>Screen</span></a></li>
+<li><a href="#setWelcomeScreen" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Welcome<wbr/>Screen</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>discork</span></a>
 <ul class="tsd-small-nested-navigation">
@@ -492,6 +526,8 @@
 <li><a href="UserFlagsManager.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>User<wbr/>Flags<wbr/>Manager</span></a></li>
 <li><a href="../interfaces/ClientUserConstructorOptions.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-256"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)"></path></g></svg><span>Client<wbr/>User<wbr/>Constructor<wbr/>Options</span></a></li>
 <li><a href="../interfaces/UserConstructorOptions.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>User<wbr/>Constructor<wbr/>Options</span></a></li>
+<li><a href="../interfaces/WelcomeScreen.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>Welcome<wbr/>Screen</span></a></li>
+<li><a href="../interfaces/WelcomeScreenChannel.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>Welcome<wbr/>Screen<wbr/>Channel</span></a></li>
 <li><a href="../types/ClientOptions.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4194304"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-type-alias)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)"></path></g></svg><span>Client<wbr/>Options</span></a></li>
 <li><a href="../types/GuildFeature.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4194304"></use></svg><span>Guild<wbr/>Feature</span></a></li>
 <li><a href="../types/Locale.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4194304"></use></svg><span>Locale</span></a></li>
