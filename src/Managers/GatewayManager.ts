@@ -97,7 +97,7 @@ export class GatewayManager extends Base {
                     rulesChannelId: d.rules_channel_id,
                     maxPresences: d.max_presences,
                     maxMembers: d.max_members,
-                    vanityURLCode: d.vanity_url_code,
+                    vanityUrlCode: d.vanity_url_code,
                     description: d.description,
                     banner: d.banner,
                     premiumTier: d.premium_tier,

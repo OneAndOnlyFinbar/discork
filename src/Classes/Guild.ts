@@ -24,7 +24,7 @@ export class Guild extends Base {
   owner: boolean;
   ownerId: string;
   permissions: GuildMemberPermissionsManager;
-  region: string = 'deprecated';
+  region: string;
   afkChannelId: string;
   afkTimeout: number;
   widgetEnabled: boolean;
@@ -80,7 +80,7 @@ export class Guild extends Base {
   // TODO: GuildEventsManager
   events: any[];
 
-  constructor(client: Client, data: { [key: string]: any }) {
+  constructor(client: Client, data: Partial<Guild>) {
     super(client);
 
     for(const [key, value] of Object.entries(data))
