@@ -6,6 +6,9 @@ export class REST extends Base {
     super(client);
   }
 
+  /**
+   * Send a get request to the Discord API.
+   */
   async get(url: string): Promise<any> {
     return new Promise((resolve) => {
       axios.get(url, {
@@ -18,6 +21,9 @@ export class REST extends Base {
     });
   }
 
+  /**
+   * Send a post request to the Discord API.
+   */
   async patch(url: string): Promise<any> {
     return new Promise((resolve) => {
       axios.patch(url, null, {
@@ -30,6 +36,9 @@ export class REST extends Base {
     });
   }
 
+  /**
+   * Handles errors from the Discord API. Ignores insignificant errors such as 404 as to not interrupt process.
+   */
   private _handleError(HTTPStatus: number, APIStatus: number, message: string) {
     if ([400, 401, 405].includes(HTTPStatus))
       throw new Error(`DiscordAPI Error ${APIStatus}: ${message}`);
