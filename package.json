@@ -1,7 +1,7 @@
 {
   "name": "discork",
   "version": "1.0.2",
-  "main": "index.js",
+  "main": "/lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./lib && tsc",

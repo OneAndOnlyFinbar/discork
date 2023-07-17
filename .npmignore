@@ -1,5 +1,9 @@
 .git/
-docs/
 .github/
+docs/
+node_modules/
+src/
+test/
 .gitignore
+.eslintrc.js
 tsconfig.json
