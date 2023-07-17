@@ -1,13 +1,9 @@
 import axios from 'axios';
-import { Base } from '../Classes/Base';
-import { Client } from '../Classes';
+import { Base, Client } from '../Classes';
 
 export class REST extends Base {
-  client: Client;
-
   constructor(client: Client) {
     super(client);
-    this.client = client;
   }
 
   async get(url: string): Promise<any> {
