@@ -19,7 +19,7 @@ export class REST extends Base {
       })
         .then(res => resolve(res.data))
         .catch(err => this._handleError(err.response.status, err.response.data.code, err.response.data.message));
-    })
+    });
   }
 
   async patch(url: string): Promise<any> {
@@ -31,7 +31,7 @@ export class REST extends Base {
       })
         .then(res => resolve(res.data))
         .catch(err => this._handleError(err.response.status, err.response.data.code, err.response.data.message));
-    })
+    });
   }
 
   private _handleError(HTTPStatus: number, APIStatus: number, message: string) {

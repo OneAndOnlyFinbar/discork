@@ -16,6 +16,9 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/ws": "^8.5.5",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
     "rimraf": "^5.0.1",
     "typedoc": "^0.24.8"
   }
