@@ -38,12 +38,12 @@ export class Client extends EventEmitter {
   /**
    * Whether to log raw packets from the gateway.
    */
-  logRaw: boolean = false;
+  logReceivedWebsocketEvents: boolean = false;
 
   constructor(options: ClientOptions) {
     super();
     this.intents = new IntentsManager(options.intents);
-    this.logRaw = options.logRaw ?? false;
+    this.logReceivedWebsocketEvents = options.logReceivedWebsocketEvents ?? false;
   }
 
   /**
