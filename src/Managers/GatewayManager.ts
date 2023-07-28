@@ -30,7 +30,7 @@ export class GatewayManager extends Base {
       const parsed = JSON.parse(data.toString());
       const { op, d, t, s } = parsed;
 
-      if (this.client.logRaw) console.log(parsed);
+      if (this.client.logReceivedWebsocketEvents) console.log(parsed);
 
       this.lastSequence = s;
 

@@ -18,6 +18,6 @@ export function Ready(client, data) {
     avatar: data.user.avatar
   });
   for (let guild of data.guilds)
-    client.guilds.set(guild.id, guild);
+    client.guilds.cache.set(guild.id, guild);
   client.emit('ready', client);
 }
