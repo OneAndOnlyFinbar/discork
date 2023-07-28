@@ -1,7 +1,7 @@
 // TODO: Add functionality
 
-import { Base } from './Base';
-import { Client } from './Client';
+import { Base } from '../Classes/Base';
+import { Client } from '../Classes/Client';
 
 export class GuildMemberPermissionsManager extends Base {
   bitfield: number;

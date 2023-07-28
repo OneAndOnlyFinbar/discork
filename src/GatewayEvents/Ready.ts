@@ -17,7 +17,7 @@ export function Ready(client, data) {
     bot: data.user.bot,
     avatar: data.user.avatar
   });
-  for (let guild of data.guilds)
+  for (const guild of data.guilds)
     client.guilds.cache.set(guild.id, guild);
   client.emit('ready', client);
 }

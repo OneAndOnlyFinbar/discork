@@ -35,55 +35,55 @@ export class GatewayManager extends Base {
       this.lastSequence = s;
 
       switch (op) {
-        // Dispatch
-        case 0: {
-          switch (t) {
-            case 'READY': {
-              Ready(this.client, d);
-              break;
-            }
-            case 'GUILD_CREATE': {
-              GuildCreate(this.client, d);
-            }
-          }
+      // Dispatch
+      case 0: {
+        switch (t) {
+        case 'READY': {
+          Ready(this.client, d);
           break;
         }
-
-        // Heartbeat
-        case 1: {
-          this.ws.send(JSON.stringify({
-            op: 1,
-            d: this.lastSequence
-          }));
-          break;
+        case 'GUILD_CREATE': {
+          GuildCreate(this.client, d);
         }
+        }
+        break;
+      }
 
-        // Requested Reconnect (Resume)
-        case 7: {
+      // Heartbeat
+      case 1: {
+        this.ws.send(JSON.stringify({
+          op: 1,
+          d: this.lastSequence
+        }));
+        break;
+      }
+
+      // Requested Reconnect (Resume)
+      case 7: {
+        this.resume();
+        break;
+      }
+
+      // Invalid Session
+      case 9: {
+        if (d) {
           this.resume();
-          break;
-        }
+        } else
+          throw new Error(Errors.GATEWAY.INVALID_SESSION);
+        break;
+      }
 
-        // Invalid Session
-        case 9: {
-          if (d) {
-            this.resume();
-          } else
-            throw new Error(Errors.GATEWAY.INVALID_SESSION);
-          break;
-        }
+      // Hello
+      case 10: {
+        const { heartbeat_interval } = d;
 
-        // Hello
-        case 10: {
-          const { heartbeat_interval } = d;
+        setInterval(() => {
+          this.sendHeartbeat();
+        }, heartbeat_interval);
 
-          setInterval(() => {
-            this.sendHeartbeat();
-          }, heartbeat_interval);
-
-          await this.authenticate();
-          break;
-        }
+        await this.authenticate();
+        break;
+      }
       }
     });
   }

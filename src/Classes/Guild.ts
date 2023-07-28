@@ -1,6 +1,6 @@
 import { Base } from './Base';
 import { Client } from './Client';
-import { GuildMemberPermissionsManager } from './GuildMemberPermissionsManager';
+import { GuildMemberPermissionsManager } from '../Managers/';
 import {
   GuildExplicitContentFilterLevel,
   GuildFeature,
